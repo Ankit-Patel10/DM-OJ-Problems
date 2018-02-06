@@ -22,5 +22,4 @@ int main() {
     int j;
     cin >> j;
     cout << calcperm(j) << endl;
-    return 0;
 }
