@@ -4,7 +4,7 @@
 using namespace std;
 
 
-
+// This is effectively an O(n^3) complexity solution
 int calcperm(int a) {
   int sum = 0;
   for(int first = 1; first <= a-3; first++) {
