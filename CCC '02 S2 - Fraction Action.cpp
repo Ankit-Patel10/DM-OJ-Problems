@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
+#include <iostream>
 
 using namespace std;
+
 
 int main() {
     int a, b;
@@ -26,9 +28,9 @@ int main() {
     }
     temp1 /= a;
     temp2 /= a;
-    
+
     if (k == 0) {
-    cout << temp1 << "/" << temp2; 
+    cout << temp1 << "/" << temp2;
     return 0;
     }
     cout << k << " " << temp1 << "/" << temp2;
