@@ -14,7 +14,7 @@ int main() {
   Gates[0] = -1;
   for(int i = 0; i < numOfPlanes; i++) {
     cin >> planes[i];
-    k = planes[i];
+    int k = planes[i];
     while(k != 0){
       if(Gates[k] == 0) {
         Gates[k] = 1;
