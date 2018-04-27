@@ -22,6 +22,9 @@ int main() {
       }
       else {
         k--;
+        if(k == 0) {
+          i = numOfPlanes;
+        }
       }
     }
   }
