@@ -12,8 +12,18 @@ int main() {
     for(int j = 0; j < 4; j++) {
       cin >> array[i][j];
       sum[i] += array[i][j];
+    }
+  }
+  for(int i = 0; i < 4; i++) {
+    for(int j = 0; j < 4; j++) {
       sum[i+4] += array[j][i];
     }
   }
-  
+  for(int i = 1; i < 7; i++) {
+    if(sum[i-1] != sum[i] || sum[i] != sum[i+1]) {
+      cout << "not magic" << endl;
+      return 0;
+    }
+  }
+  cout << "magic" << endl;
 }
