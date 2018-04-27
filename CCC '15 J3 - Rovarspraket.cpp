@@ -42,7 +42,7 @@ string nextConsonant(string s, int i, unordered_map<char,int> placement) {
   char k = s[i];
   if(k == 'z') return "z";
   int location = placement[k];
-  for(int i = location; i < 27; i++) {
+  for(int i = location+1; i < 27; i++) {
     if (Consonant[i] != 'a' && Consonant[i] != 'e' && Consonant[i] != 'i' && Consonant[i] != 'o' && Consonant[i] != 'u') {
       string temp;
       temp[0] = Consonant[i];
