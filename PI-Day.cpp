@@ -39,23 +39,23 @@ int main() {
   }
   pies[numOfPeople-1] = numOfPies-(numOfPeople-1);
   int numofWays = 1;
-  printArray(pies, numOfPeople);
+//  printArray(pies, numOfPeople);
     for(int i = numOfPeople-1; i > 0; i--) {
       while(pies[i] > (pies[i-1]+1)) {
         pies[i]--;
         pies[i-1]++;
         numofWays++;
-        printArray(pies, numOfPeople);
+      //  printArray(pies, numOfPeople);
       }
     }
 
   for(int i = numOfPeople-1; i > 0; i--) {
     for(int j = i-1; j >= 0; j--) {
-      if(pies[i] > (pies[j]+1)) {
+      if(pies[i] > (pies[j]+1) && pies[i]-1 >= pies[i-1]) {
         pies[i]--;
         pies[j]++;
         numofWays++;
-        printArray(pies, numOfPeople);
+    //    printArray(pies, numOfPeople);
       }
     }
   }
