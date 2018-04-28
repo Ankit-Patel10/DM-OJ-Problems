@@ -12,7 +12,7 @@ int sum(int a[], int n) {
 
 int main() {
   int numOfPies;
-  cin >> numofPies;
+  cin >> numOfPies;
 
   int numOfPeople;
   cin >> numOfPeople;
@@ -32,7 +32,7 @@ int main() {
   }
   pies[numOfPeople] = numOfPies-(numOfPeople-1);
   int numofWays = 1;
-
+  cout << pies[numOfPeople] << endl;
     for(int i = numOfPeople; i > 0; i--) {
       while(pies[i] > (pies[i-1]+1)) {
         pies[i]--;
