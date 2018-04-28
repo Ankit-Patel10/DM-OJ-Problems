@@ -10,6 +10,13 @@ int sum(int a[], int n) {
   return sum;
 }
 
+void printArray(int a[], int n) {
+  for(int i = 0; i < n; i++) {
+    cout << a[i] << " ";
+  }
+  cout << endl;
+}
+
 int main() {
   int numOfPies;
   cin >> numOfPies;
@@ -30,23 +37,25 @@ int main() {
   for(int i = 0; i < numOfPeople-1; i++) {
     pies[i] = 1;
   }
-  pies[numOfPeople] = numOfPies-(numOfPeople-1);
+  pies[numOfPeople-1] = numOfPies-(numOfPeople-1);
   int numofWays = 1;
-  cout << pies[numOfPeople] << endl;
-    for(int i = numOfPeople; i > 0; i--) {
+  printArray(pies, numOfPeople);
+    for(int i = numOfPeople-1; i > 0; i--) {
       while(pies[i] > (pies[i-1]+1)) {
         pies[i]--;
         pies[i-1]++;
         numofWays++;
+        printArray(pies, numOfPeople);
       }
     }
 
-  for(int i = numOfPeople; i > 0; i--) {
+  for(int i = numOfPeople-1; i > 0; i--) {
     for(int j = i-1; j >= 0; j--) {
       if(pies[i] > (pies[j]+1)) {
         pies[i]--;
         pies[j]++;
         numofWays++;
+        printArray(pies, numOfPeople);
       }
     }
   }
