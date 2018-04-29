@@ -19,6 +19,7 @@ int main() {
       }
     }
     ways++;
+    cout << k;
     cout << ways << endl;
   }
 }
