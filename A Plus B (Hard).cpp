@@ -19,6 +19,7 @@ int main() {
     }
     while(first.size() < second.size()) {
       first.push_back('0');
+      
     }
   }
 
