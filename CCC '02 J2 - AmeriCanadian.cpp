@@ -13,7 +13,8 @@ int main() {
         k.insert(i+1, "u");
       }
     }
-    cout << k << endl;
+    cout <<k<< endl;
+
   }
   }
 }
